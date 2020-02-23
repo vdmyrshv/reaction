@@ -3,7 +3,9 @@ import { useAppContext } from './hooks'
 
 const MessageBoard = () => {
 
-    const {state: {messages}} = useAppContext()
+    const {state, state:{messages}} = useAppContext();
+
+    console.log(state)
 
     return (
         <div>
@@ -11,7 +13,8 @@ const MessageBoard = () => {
             {messages.map(msg=>(
                 <div key={msg.id}>
                     <h4>{msg.text}</h4>
-                    <p>Published on {new Date(msg.timestamp).toLocaleString()}</p>
+                    <p>by {msg.author}</p>
+                    <p> on {new Date(msg.timestamp).toLocaleString()}</p>
                 </div>
             ))}
         </div>
