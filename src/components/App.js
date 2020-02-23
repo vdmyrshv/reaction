@@ -2,7 +2,7 @@ import React, { useReducer, useContext, useEffect } from 'react';
 import reducer from '../state/reducer'
 import Context from '../context'
 
-import PubSub, { MESSAGE_CHANNEL } from '../pubsub'
+import PubSub from '../pubsub'
 
 import PublishMessage from './PublishMessage'
 import MessageBoard from './MessageBoard'

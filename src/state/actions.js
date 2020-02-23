@@ -12,3 +12,9 @@ export const setUsername = text => ({
         payload: text
     }
 )
+
+export const setReaction = ({type, emoji, username, messageId}) => ({
+    type,
+    payload: {id: uuid(), timestamp: Date.now(), username, emoji, messageId}
+}
+)
